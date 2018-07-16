@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+  
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="main.css">
+
+  </head>
+
+  
+
+  <body>
+
+  	  <page size="A4">                                               
+
+      <div class="format">
+
+      <h1>  JUCIELE SACRAMENTO FREITAS   </h1>
+
+      
+
+     <h2> FLUXO DE CONTROLE EXCEPCIONAL </h2>
+     <H2> RESUMO </H2>
+
+
+
+      	<p>	É uma sequência de transferências de controle. Normalmente, mudanças abruptas 
+	neste fluxo, são causadas por instruções familiares do programa, como saltos, chamadas
+	e retornos. Essas mudanças abruptas são conhecidas como fluxo de controle excepcional (ECF).</p>
+
+
+
+	<p>8.1 EXCEÇÕES</p>
+		Entende-se por exceção, uma mudança abrupta no fluxo de controle em resposta a alguma alteração
+	no estado do processador, implementadas parcialmente pelo hardware e parcialmente pelo sistema
+	operacional, variando de sistema para sistema, mas com as mesmas deias para todos os sistemas.</p>
+		<p>Cada tipo de exceção possível em um sistema recebe um número de exceção inteiro 
+	não-negativo exclusivo. Alguns desses números são atribuídos pelos projetistas do processador 
+	e outros números são atribuídos pelos projetistas do kernel do sistema. Podem ser divididas
+	em quatro classes: interrupções, armadilhas, falhas e abortos. Definidas para os sistemas IA32
+	temos até 256 tipos de exceção diferentes.</p>
+
+		
+
+	<p>8.2 PROCESSOS </p>
+		<p>As exceções são os blocos básicos que permitem que o sistema operacional forneça a noção
+	de um processo. Segundo o autor, a definição clássica de um processo é uma instância de um programa
+	em execução. Cada programa no sistema é executado no contexto de algum processo. O fluxo de controle
+	lógico é uma seqüência de valores que mostra as etapas de uma execução. Um fluxo lógico cuja execução
+	se sobrepõe no tempo com outro fluxo é chamado de fluxo concorrente e os dois fluxos são executados
+	simultaneamente, a ocasião de vários fluxos sendo executados simultaneamente é conhecido como 
+	simultaneidade. </p> 
+		<p> Um processo fornece a cada programa seu próprio espaço de endereço privado(no sentido 
+	de que um byte de memória associado a um determinado endereço no espaço não pode, em geral, ser lido
+	ou escrito por nenhum outro processo). Para que o kernel do sistema operacional forneça uma abstração
+	de processo impermeável, o processador deve fornecer um mecanismo que restrinja as instruções que
+	um aplicativo pode executar, bem como as partes do espaço de endereço que ele pode acessar. Então 
+	ele faz a divisão entre execução entre modo kernel e modo usuario. Switch de contexto é a forma
+	como o sistema operacional implementa a multitarefa usando uma forma de alto nível de fluxo de 
+	controle excepcional.</p>
+
+		
+
+	<p>8.4	CONTROLE DE PROCESSO </p>
+
+ 		</p>Cada processo tem um ID de processo (PID) positivo (diferente de zero). A função getpid 
+	retorna o PID do processo de chamada. A função getppid retorna o PID do processo que criou o 
+	processo de chamada. Consideremos, geralmente que o processo pode está em três estados: corrida,
+	parado e terminado. A função de saída finaliza o processo com um status de saída de status ou 
+	retornando um valor inteiro da rotina principal. Quando o pai colhe o filho finalizado, o 
+	kernel passa o status de saída do filho para o pai e, em seguida, descarta o processo finalizado.</p>
+	Nesse ponto, ele deixa de existir. O processo final que ainda não foi obtido é chamado de zumbi.
+		<p>O comportamento padrão pode ser modificado pela configuração de opções para várias 
+	combinações das constantes WNOHANG e WUNTRACED: pondendo ser WNOHANG, WUNTRACED ou ainda
+	WNOHANG | WUNTRACED. A função sleep suspende um processo por um período de tempo especificado, 
+	retornando zero se a quantidade solicitada de tempo tiver decorrido e o número de segundos 
+	que ainda restam para dormir. Um shell é um programa interativo em nível de aplicativo que 
+	executa outros programas em nome do usuário. Um shell executa uma seqüência de etapas de 
+	leitura / avaliação e, em seguida, termina. A etapa de leitura lê uma linha de comando do 
+	usuário. A etapa de avaliação analisa a linha de comando e executa programas em nome do usuário.</p>
+	      
+
+	<p>8.5 SINAIS </p>
+		<p>Um sinal é uma pequena mensagem que notifica um processo que um evento de algum tipo
+	ocorreu no sistema, onde cada tipo de sinal corresponde a algum tipo de evento do sistema. 
+	Os sinais fornecem um mecanismo para expor a ocorrência de tais exceções aos processos do 
+	usuário. Alguns sinais correspondem a eventos de software de nível superior no kernel ou 
+	em outros processos do usuário.  A transferência de um sinal para um processo de destino 
+	ocorre em duas etapas distintas: enviando um sinal e receber um sinal. Função de alarme
+	é o caso de um processo poder enviar sinais SIGALRM para si mesmo. Os problemas de manuseio
+	de sinais ocorrem quando um programa captura múltiplos sinais: sinais pendentes são 
+	bloqueados, sinais pendentes não são enfileirados, chamadas do sistema podem ser interrompidas.
+	As chamadas para bloquear explicitamente e desbloquear sinais são: SIG_BLOCK, SIG_UNBLOCK, 
+	SIG_SETMASK . Sincronizar é uma forma de a evitar erros de simultaneidade.</p>
+
+	<p>8.6 SALTOS NÃO-LOCAIS </p>
+		<p>É uma forma de controle no nível de usuário, que transfere o controle diretamente 
+	de uma função para outra que atualmente está em execução, sem ter que passar pela sequência
+	normal de chamada de retorno. São fornecidos pelas funções setjmp e longjmp. </p>
+
+	<p>8.7 FERRAMENTAS PARA MANIPULAÇÃO DE PROCESSOS</p>
+		<p>Os sistemas Linux fornecem várias ferramentas úteis para monitorar e manipular processos.
+	Esses recursos são importantes para que o progrmador possa realizar alterações no sistema de forma 
+	mais simples, entre elas estão: strace, top, pmap e / proc. </p>
+
+
+
+	</div>
+
+   </page>
+
+		
+
+ <page size="A4">     
+
+      <div class="format"> 
+
+		
+
+
+
+	</div>
+
+   </page>
+
+
+
+	</body>
+
+</html>
