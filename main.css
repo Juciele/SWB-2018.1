@@ -1,0 +1,47 @@
+* {
+    font-family: "Times New Roman", Times, serif;
+    text-align: justify;
+}
+
+h1 {
+    text-align:center;
+}
+body {
+  background: rgb(204,204,204); 
+}
+page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+page[size="A4"] {  
+  width: 21cm;
+  height: 29.7cm; 
+}
+
+.cabecalho {
+    text-align:center;
+    text-indent: 0px;
+}
+
+.resumo {
+    margin-left: 0.5cm;
+    margin-right: 0.5cm;
+    font-style:italic;
+}
+.format{
+      padding: 3cm 3cm 3cm 2.5cm;
+}
+
+.index{
+    text-indent:50px;
+}
+
+@media print {
+  body, page {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
